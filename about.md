@@ -20,13 +20,13 @@ My interests span several hardware domains including power electronics, digital 
 
 **Selected projects**:
 
-• **Discrete Buck Converter** – Designed and implemented a switching buck converter entirely from discrete components, including PWM generation, gate driving, control loop, and soft-start circuitry.
+- **Discrete Buck Converter** – Designed and implemented a switching buck converter entirely from discrete components, including PWM generation, gate driving, control loop, and soft-start circuitry.
 
-• **32-bit MIPS Processor on FPGA** – Implemented a fully pipelined 32-bit MIPS CPU in Verilog with hazard detection and peripheral drivers, running a playable game on FPGA hardware.
+- **32-bit MIPS Processor on FPGA** – Implemented a fully pipelined 32-bit MIPS CPU in Verilog with hazard detection and peripheral drivers, running a playable game on FPGA hardware.
 
-• **Rechargeable Bluetooth Speaker** – Designed a portable Bluetooth speaker including schematic design, 4-layer PCB layout, battery management, firmware integration, and a custom enclosure.
+- **Rechargeable Bluetooth Speaker** – Designed a portable Bluetooth speaker including schematic design, 4-layer PCB layout, battery management, firmware integration, and a custom enclosure.
 
-• **Discrete FM Radio Receiver** – Built an FM receiver from transistor-level RF blocks including LNA, mixer, oscillator, IF amplifier, demodulator, and audio power stage.
+- **Discrete FM Radio Receiver** – Built an FM receiver from transistor-level RF blocks including LNA, mixer, oscillator, IF amplifier, demodulator, and audio power stage.
 
 My development process typically begins with studying the relevant theory and architectures, followed by simulation, prototyping, and iterative testing. After validating the design, I move to full system implementation, integration, and debugging until a complete working product is achieved.
 
