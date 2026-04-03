@@ -18,7 +18,7 @@ I’m an electrical engineer with a B.Sc. in Electrical Engineering from Tel Avi
 
 My interests span several hardware domains including power electronics, digital design, embedded systems, and RF, and I particularly enjoy projects that result in complete, working systems.
 
-Selected projects:
+**Selected projects**:
 
 • **Discrete Buck Converter** – Designed and implemented a switching buck converter entirely from discrete components, including PWM generation, gate driving, control loop, and soft-start circuitry.
 
@@ -30,7 +30,7 @@ Selected projects:
 
 My development process typically begins with studying the relevant theory and architectures, followed by simulation, prototyping, and iterative testing. After validating the design, I move to full system implementation, integration, and debugging until a complete working product is achieved.
 
-I’m particularly interested in joining a startup environment where I can work across multiple layers of a product and contribute to building complete hardware systems from concept to working device.
+I’m particularly interested in joining a **startup environment** where I can work across multiple layers of a product and contribute to building complete hardware systems from concept to working device.
 
 ### Get in Touch
 
