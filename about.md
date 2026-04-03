@@ -12,13 +12,25 @@ permalink: /about/
 
 <div class="about-text" markdown="1">
 
-## Hello, I'm Your Name
+## Hello, I'm Adar
 
-I'm a designer and developer passionate about creating clean, functional digital experiences. With a background in both design and engineering, I enjoy bridging the gap between how things look and how they work.
+I’m an electrical engineer with a B.Sc. in Electrical Engineering from Tel Aviv University and currently pursuing an M.Sc. there. I have three years of industry experience as an electrical engineer and use personal projects to deepen my understanding of electronic systems and explore areas beyond my day-to-day work.
 
-Currently, I'm focused on building products that are intuitive, accessible, and delightful to use. When I'm not at my desk, you can find me hiking, reading, or experimenting with new creative tools.
+My interests span several hardware domains including power electronics, digital design, embedded systems, and RF, and I particularly enjoy projects that result in complete, working systems.
 
-This portfolio showcases a selection of my recent work across web development, UI/UX design, and brand identity. Each project reflects my commitment to thoughtful craft and clear communication.
+Selected projects:
+
+• **Discrete Buck Converter** – Designed and implemented a switching buck converter entirely from discrete components, including PWM generation, gate driving, control loop, and soft-start circuitry.
+
+• **32-bit MIPS Processor on FPGA** – Implemented a fully pipelined 32-bit MIPS CPU in Verilog with hazard detection and peripheral drivers, running a playable game on FPGA hardware.
+
+• **Rechargeable Bluetooth Speaker** – Designed a portable Bluetooth speaker including schematic design, 4-layer PCB layout, battery management, firmware integration, and a custom enclosure.
+
+• **Discrete FM Radio Receiver** – Built an FM receiver from transistor-level RF blocks including LNA, mixer, oscillator, IF amplifier, demodulator, and audio power stage.
+
+My development process typically begins with studying the relevant theory and architectures, followed by simulation, prototyping, and iterative testing. After validating the design, I move to full system implementation, integration, and debugging until a complete working product is achieved.
+
+I’m particularly interested in joining a startup environment where I can work across multiple layers of a product and contribute to building complete hardware systems from concept to working device.
 
 ### Get in Touch
 
