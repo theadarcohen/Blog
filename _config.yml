@@ -5,7 +5,7 @@
 # Update these values with your own information.
 
 title: "Adar Cohen"
-description: "Electrical engineer building complete hardware systems across power electronics, digital design, embedded systems, and RF, with personal engineering projects spanning RF circuits, embedded systems, and software experiments."
+description: "Electrical engineer building complete hardware systems across power electronics, digital design, embedded systems, and RF. A collection of personal engineering projects and experiments."
 url: "https://leoac1.github.io"
 baseurl: "/Blog" # Subpath because repo is named "Blog", not "leoac1.github.io"
 
