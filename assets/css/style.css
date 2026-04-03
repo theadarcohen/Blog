@@ -1,0 +1,653 @@
+/* =============================================================================
+   Portfolio / Blog — Main Stylesheet
+   A clean, minimal portfolio theme with responsive layout.
+   Accent color: #4A6CF7 (soft blue) — change this to match your brand.
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Reset & Base
+   ----------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --color-text: #2c2c2c;
+  --color-text-light: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #4A6CF7;
+  --color-accent-hover: #3b5de7;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --container-width: 1100px;
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* -----------------------------------------------------------------------------
+   Container
+   ----------------------------------------------------------------------------- */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* -----------------------------------------------------------------------------
+   Header
+   ----------------------------------------------------------------------------- */
+.site-header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Monogram / Logo */
+.site-logo {
+  text-decoration: none;
+}
+
+.monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--color-text);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  transition: background var(--transition);
+}
+
+.site-logo:hover .monogram {
+  background: var(--color-accent);
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.site-nav a {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition);
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--color-text);
+}
+
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  width: 100%;
+}
+
+/* -----------------------------------------------------------------------------
+   Hero Section (Home Page)
+   ----------------------------------------------------------------------------- */
+.hero {
+  padding: 80px 0 60px;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero .accent {
+  color: var(--color-accent);
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.hero-intro {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.hero-intro a {
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------------------------
+   Project Grid (Home Page)
+   ----------------------------------------------------------------------------- */
+.projects {
+  padding: 40px 0 80px;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  color: inherit;
+}
+
+.project-thumbnail {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumbnail img {
+  transform: scale(1.03);
+}
+
+.project-info {
+  padding: 20px 24px 24px;
+}
+
+.project-info time {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.project-info p {
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* Tags (shared between grid cards and post pages) */
+.project-tags,
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+}
+
+/* -----------------------------------------------------------------------------
+   Post Layout (Individual Project Page)
+   ----------------------------------------------------------------------------- */
+.post {
+  padding: 60px 0 80px;
+}
+
+.post .container {
+  max-width: 780px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.post-meta time {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.post-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.post-description {
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.post-hero {
+  margin: 40px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.post-hero img {
+  width: 100%;
+}
+
+/* Post body content */
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.post-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 48px 0 16px;
+}
+
+.post-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 36px 0 12px;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.post-content li {
+  margin-bottom: 8px;
+}
+
+.post-content img {
+  border-radius: var(--radius);
+  margin: 32px 0;
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding: 4px 0 4px 20px;
+  margin: 24px 0;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Code blocks */
+.post-content code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--color-bg-alt);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.post-content pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font-size: 0.88rem;
+}
+
+/* Tables */
+/* Figure & captions */
+.post-content figure {
+  margin: 32px 0;
+}
+
+.post-content figure img {
+  margin: 0;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.post-content figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-align: center;
+  font-style: italic;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+}
+
+/* Tables */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 0.95rem;
+}
+
+.post-content th,
+.post-content td {
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post-content th {
+  font-weight: 600;
+  background: var(--color-bg-alt);
+}
+
+/* Post footer */
+.post-footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.back-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Page Layout (About, etc.)
+   ----------------------------------------------------------------------------- */
+.page {
+  padding: 60px 0 80px;
+}
+
+.page .container {
+  max-width: 780px;
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.page-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.page-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 40px 0 16px;
+}
+
+.page-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+.page-content p {
+  margin-bottom: 20px;
+  color: var(--color-text-light);
+}
+
+.page-content ul,
+.page-content ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+  color: var(--color-text-light);
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
+.page-content a {
+  font-weight: 500;
+}
+
+/* About page layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* -----------------------------------------------------------------------------
+   Footer
+   ----------------------------------------------------------------------------- */
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
+  margin-top: 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--color-text-light);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive
+   ----------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .post-title {
+    font-size: 1.75rem;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .site-header .container {
+    flex-direction: row;
+  }
+
+  .site-nav {
+    gap: 20px;
+  }
+
+  .site-nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .project-info {
+    padding: 16px 18px 20px;
+  }
+
+  .post .container,
+  .page .container {
+    padding: 0 18px;
+  }
+
+  .post-title,
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .post-content pre {
+    padding: 16px;
+    margin-left: -18px;
+    margin-right: -18px;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,68 @@
+# =============================================================================
+# Site Settings
+# =============================================================================
+# These are the core settings for your portfolio site.
+# Update these values with your own information.
+
+title: "Adar Cohen"
+description: "Personal engineering projects including power electronics, RF circuits, embedded systems, and software experiments."
+url: "https://leoac1.github.io"
+baseurl: "/Blog" # Subpath because repo is named "Blog", not "leoac1.github.io"
+
+# =============================================================================
+# Author / Identity
+# =============================================================================
+author:
+  name: "Adar Cohen"
+  email: "your.email@example.com"
+  bio: "A short bio that appears in various places across the site."
+  github: "LeoAC1"
+  linkedin: "adar-cohen-2a71133b4"
+
+# =============================================================================
+# Build Settings
+# =============================================================================
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+timezone: Israel # Change to your timezone
+
+# Kramdown settings for nice code blocks and smart quotes
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+# Pagination is not used (GitHub Pages has limited plugin support),
+# so we use Liquid to loop through posts on the home page.
+
+# =============================================================================
+# Collections & Defaults
+# =============================================================================
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# =============================================================================
+# Excludes
+# =============================================================================
+# Files that should not be copied to the built site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - vendor
+
+# =============================================================================
+# Plugins (GitHub Pages compatible)
+# =============================================================================
+plugins:
+  - jekyll-seo-tag
