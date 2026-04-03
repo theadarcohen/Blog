@@ -14,11 +14,9 @@ permalink: /about/
 
 ## Hello, I'm Adar
 
-I’m an electrical engineer with a B.Sc. in Electrical Engineering from Tel Aviv University and currently pursuing an M.Sc. there. I have three years of industry experience as an electrical engineer and use personal projects to deepen my understanding of electronic systems and explore areas beyond my day-to-day work.
+I’m an electrical engineer with a **B.Sc. in Electrical Engineering** from Tel Aviv University and currently pursuing an M.Sc. there. I have **three years of industry experience** as an electrical engineer and use personal projects to deepen my understanding of electronic systems and explore areas beyond my day-to-day work.
 
-My interests span several hardware domains including power electronics, digital design, embedded systems, and RF, and I particularly enjoy projects that result in complete, working systems.
-
-**Selected projects**:
+My interests span several hardware domains including power electronics, digital design, embedded systems, and RF, and I particularly enjoy projects that result in complete, working systems. Here are some of them:
 
 - **Discrete Buck Converter** – Designed and implemented a switching buck converter entirely from discrete components, including PWM generation, gate driving, control loop, and soft-start circuitry.
 
