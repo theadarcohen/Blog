@@ -35,6 +35,7 @@ What I enjoy most is working across every layer of a system — from the first e
 I'm always happy to talk about engineering and projects.
 
 - **LinkedIn:** [linkedin.com/in/adar-cohen-2a71133b4](https://linkedin.com/in/adar-cohen-2a71133b4)
+- **Email:** [theadarcohen2001@gmail.com](mailto:theadarcohen2001@gmail.com)
 
 </div>
 
