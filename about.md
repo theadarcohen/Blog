@@ -35,7 +35,7 @@ I’m particularly interested in joining a **startup environment** where I can w
 I'm always open to interesting conversations and new opportunities.
 
 - **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **GitHub:** [github.com/LeoAC1](https://github.com/LeoAC1)
+- **GitHub:** [github.com/theadarcohen](https://github.com/theadarcohen)
 - **LinkedIn:** [linkedin.com/in/adar-cohen-2a71133b4](https://linkedin.com/in/adar-cohen-2a71133b4)
 
 </div>

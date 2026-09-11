@@ -6,8 +6,8 @@
 
 title: "Adar Cohen"
 description: "Electrical engineer building complete hardware systems across power electronics, digital design, embedded systems, and RF. A collection of personal engineering projects and experiments."
-url: "https://leoac1.github.io"
-baseurl: "/Blog" # Subpath because repo is named "Blog", not "leoac1.github.io"
+url: "https://theadarcohen.github.io"
+baseurl: "/Blog" # Subpath because repo is named "Blog", not "theadarcohen.github.io"
 
 # =============================================================================
 # Author / Identity
@@ -16,7 +16,7 @@ author:
   name: "Adar Cohen"
   email: "your.email@example.com"
   bio: "A short bio that appears in various places across the site."
-  github: "LeoAC1"
+  github: "theadarcohen"
   linkedin: "adar-cohen-2a71133b4"
 
 # =============================================================================
