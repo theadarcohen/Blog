@@ -28,11 +28,11 @@ My interests span several hardware domains including power electronics, digital 
 
 My development process typically begins with studying the relevant theory and architectures, followed by simulation, prototyping, and iterative testing. After validating the design, I move to full system implementation, integration, and debugging until a complete working product is achieved.
 
-I’m particularly interested in joining a **startup environment** where I can work across multiple layers of a product and contribute to building complete hardware systems from concept to working device.
+What I enjoy most is working across every layer of a system — from the first equations to a working device — which is exactly what these projects let me practice.
 
 ### Get in Touch
 
-I'm always open to interesting conversations and new opportunities.
+I'm always happy to talk about engineering and projects.
 
 - **LinkedIn:** [linkedin.com/in/adar-cohen-2a71133b4](https://linkedin.com/in/adar-cohen-2a71133b4)
 
