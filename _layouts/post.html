@@ -36,3 +36,24 @@ layout: default
     </footer>
   </div>
 </article>
+
+<!-- Click a figure to view it full size -->
+<div class="lightbox" hidden>
+  <img src="" alt="">
+</div>
+<script>
+  (function () {
+    var box = document.querySelector('.lightbox');
+    var boxImg = box.querySelector('img');
+    document.querySelectorAll('.post-content figure img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        boxImg.src = img.src;
+        boxImg.alt = img.alt;
+        box.hidden = false;
+      });
+    });
+    function close() { box.hidden = true; boxImg.src = ''; }
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+</script>

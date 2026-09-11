@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 390" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>FM receiver block diagram with build status of each block</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .wire { stroke: #4b5563; stroke-width: 2; fill: none; }
+      .name { font-size: 15px; font-weight: 600; fill: #2c2c2c; text-anchor: middle; }
+      .stat { font-size: 12px; text-anchor: middle; }
+      .done rect { fill: #e8f5ee; stroke: #2f855a; }
+      .done .stat { fill: #276749; }
+      .part rect { fill: #fdf3e1; stroke: #b7791f; }
+      .part .stat { fill: #975a16; }
+      .todo rect { fill: #f3f4f6; stroke: #9ca3af; stroke-dasharray: 5 4; }
+      .todo .stat { fill: #6b7280; }
+      rect { stroke-width: 2; }
+      .icon { stroke: #2c2c2c; stroke-width: 2; fill: none; }
+      .label { font-size: 12px; fill: #6b7280; text-anchor: middle; }
+      .legend { font-size: 13px; fill: #2c2c2c; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="390" fill="#ffffff" stroke="none"/>
+
+  <!-- Row 1: RF front end, left to right -->
+  <!-- Antenna -->
+  <path class="icon" d="M50 130 V74 M30 58 L50 84 L70 58 Z"/>
+  <text class="label" x="50" y="152">Antenna</text>
+  <text class="label" x="50" y="167" fill="#276749" style="fill:#276749">measured</text>
+  <line class="wire" x1="50" y1="130" x2="93" y2="130" marker-end="url(#arrow)"/>
+
+  <g class="done">
+    <rect x="95" y="98" width="140" height="64" rx="8"/>
+    <text class="name" x="165" y="125">Input match</text>
+    <text class="stat" x="165" y="146">Built (in LNA)</text>
+  </g>
+  <line class="wire" x1="235" y1="130" x2="273" y2="130" marker-end="url(#arrow)"/>
+
+  <g class="done">
+    <rect x="275" y="98" width="140" height="64" rx="8"/>
+    <text class="name" x="345" y="125">LNA</text>
+    <text class="stat" x="345" y="146">Built · measured</text>
+  </g>
+  <line class="wire" x1="415" y1="130" x2="453" y2="130" marker-end="url(#arrow)"/>
+
+  <g class="done">
+    <rect x="455" y="98" width="140" height="64" rx="8"/>
+    <text class="name" x="525" y="119">RF band-pass</text>
+    <text class="name" x="525" y="137" style="font-size:13px;font-weight:500">+ output match</text>
+    <text class="stat" x="525" y="154">Built (in LNA)</text>
+  </g>
+  <line class="wire" x1="595" y1="130" x2="633" y2="130" marker-end="url(#arrow)"/>
+
+  <g class="part">
+    <rect x="635" y="98" width="140" height="64" rx="8"/>
+    <text class="name" x="705" y="125">Mixer</text>
+    <text class="stat" x="705" y="146">1–4 MHz prototypes</text>
+  </g>
+
+  <!-- Local oscillator above the mixer -->
+  <g class="done">
+    <rect x="635" y="8" width="140" height="56" rx="8"/>
+    <text class="name" x="705" y="31">Local oscillator</text>
+    <text class="stat" x="705" y="51">Built · 87–117 MHz</text>
+  </g>
+  <line class="wire" x1="705" y1="64" x2="705" y2="96" marker-end="url(#arrow)"/>
+
+  <!-- Wrap from mixer down to row 2 -->
+  <path class="wire" d="M775 130 H860 V270 H832" marker-end="url(#arrow)"/>
+  <text class="label" x="872" y="205" transform="rotate(90 872 205)">10.7 MHz IF</text>
+
+  <!-- Row 2: IF and audio, right to left -->
+  <g class="todo">
+    <rect x="690" y="238" width="140" height="64" rx="8"/>
+    <text class="name" x="760" y="265">Channel filter</text>
+    <text class="stat" x="760" y="286">Not started</text>
+  </g>
+  <line class="wire" x1="690" y1="270" x2="652" y2="270" marker-end="url(#arrow)"/>
+
+  <g class="todo">
+    <rect x="510" y="238" width="140" height="64" rx="8"/>
+    <text class="name" x="580" y="265">IF amplifier</text>
+    <text class="stat" x="580" y="286">Not started</text>
+  </g>
+  <line class="wire" x1="510" y1="270" x2="472" y2="270" marker-end="url(#arrow)"/>
+
+  <g class="part">
+    <rect x="330" y="238" width="140" height="64" rx="8"/>
+    <text class="name" x="400" y="265">Demodulator</text>
+    <text class="stat" x="400" y="286">Simulated</text>
+  </g>
+  <line class="wire" x1="330" y1="270" x2="292" y2="270" marker-end="url(#arrow)"/>
+
+  <g class="done">
+    <rect x="150" y="238" width="140" height="64" rx="8"/>
+    <text class="name" x="220" y="265">Audio amplifier</text>
+    <text class="stat" x="220" y="286">Built · tested</text>
+  </g>
+  <line class="wire" x1="150" y1="270" x2="112" y2="270" marker-end="url(#arrow)"/>
+
+  <!-- Speaker -->
+  <path class="icon" d="M110 258 H96 V282 H110 Z M96 258 L72 242 V298 L96 282"/>
+  <text class="label" x="88" y="318">Speaker</text>
+
+  <!-- Legend -->
+  <g transform="translate(150 350)">
+    <rect x="0" y="0" width="18" height="14" rx="3" fill="#e8f5ee" stroke="#2f855a" stroke-width="2"/>
+    <text class="legend" x="26" y="12">Built and measured</text>
+    <rect x="190" y="0" width="18" height="14" rx="3" fill="#fdf3e1" stroke="#b7791f" stroke-width="2"/>
+    <text class="legend" x="216" y="12">Prototyped or simulated only</text>
+    <rect x="430" y="0" width="18" height="14" rx="3" fill="#f3f4f6" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4 3"/>
+    <text class="legend" x="456" y="12">Not started</text>
+  </g>
+</svg>
