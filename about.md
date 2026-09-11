@@ -7,7 +7,7 @@ permalink: /about/
 <div class="about-layout">
 
 <div class="about-photo">
-  <img src="https://placehold.co/400x400/e8e8e8/999999?text=Your+Photo" alt="Your Name">
+  <img src="{{ '/assets/Images/About/profile.jpg' | relative_url }}" alt="Adar Cohen">
 </div>
 
 <div class="about-text" markdown="1">
