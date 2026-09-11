@@ -7,5 +7,6 @@ Gemfile.lock
 .DS_Store
 Thumbs.db
 
-# Personal Claude Code settings (local paths, approved commands)
+# Personal Claude Code settings and notes (local paths, approved commands)
 .claude/settings.local.json
+CLAUDE.md
