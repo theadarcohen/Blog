@@ -7,7 +7,7 @@ permalink: /about/
 <div class="about-layout">
 
 <div class="about-photo">
-  <img src="{{ '/assets/Images/About/profile.jpg' | relative_url }}" alt="Adar Cohen">
+  <img src="{{ '/assets/Images/About/profile.jpeg' | relative_url }}" alt="Adar Cohen">
 </div>
 
 <div class="about-text" markdown="1">
