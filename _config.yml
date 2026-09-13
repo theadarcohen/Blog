@@ -38,6 +38,11 @@ kramdown:
 # Collections & Defaults
 # =============================================================================
 defaults:
+  # Link-preview image for pages without their own (home, About). Posts set `image:` themselves.
+  - scope:
+      path: ""
+    values:
+      image: "/assets/Images/Social/portfolio.jpg"
   - scope:
       path: ""
       type: "posts"

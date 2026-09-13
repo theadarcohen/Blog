@@ -3,6 +3,7 @@ title: "Designing an FM Receiver Front End from Discrete Transistors"
 description: "A design study of a superheterodyne FM receiver built from discrete transistors — the 98 MHz low-noise amplifier and a tunable local oscillator are built and measured, while the rest of the radio was never integrated."
 date: 2026-06-01
 thumbnail: "/assets/Images/FM-Receiver/lna-build-hero.png"
+image: "/assets/Images/Social/fm-receiver.jpg"
 tags: [RF Design, Analog Design, Impedance Matching, LTspice, NanoVNA]
 math: true
 ---

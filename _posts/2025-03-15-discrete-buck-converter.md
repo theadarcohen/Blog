@@ -3,6 +3,7 @@ title: "Designing a Discrete Buck Converter from Scratch"
 description: "A fully discrete 5V-to-3V buck converter — from theory and simulation through PCB layout to hardware testing — with no off-the-shelf controller IC."
 date: 2025-03-15
 thumbnail: "/assets/Images/Buck-Converter/assembled-board.png"
+image: "/assets/Images/Social/buck-converter.jpg"
 tags: [Power Electronics, Analog Design, PCB Design, LTspice, KiCad]
 ---
 

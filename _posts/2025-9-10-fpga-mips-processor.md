@@ -3,6 +3,7 @@ title: "Building a MIPS Processor on an FPGA from Scratch"
 description: "A 32-bit pipelined MIPS processor in Verilog — from basic gates through a 5-stage pipeline with forwarding, to I/O integration with an OLED display and keypad — running a custom game on an Artix-7 FPGA at 90 MHz."
 date: 2025-9-10
 thumbnail: "/assets/Images/FPGA-Processor/final-setup.png"
+image: "/assets/Images/Social/fpga-processor.jpg"
 tags: [FPGA, Verilog, Computer Architecture, Digital Design, Vivado]
 ---
 

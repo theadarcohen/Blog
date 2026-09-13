@@ -3,6 +3,7 @@ title: "Designing a Rechargeable Bluetooth Speaker from Scratch"
 description: "A custom Bluetooth speaker — from power architecture and PCB design through 3D-printed enclosure to working product — built around an ESP32, Class D amplifier, and Li-ion battery on a 4-layer PCB."
 date: 2025-12-01
 thumbnail: "/assets/Images/Bluetooth-Speaker/final-assembly.png"
+image: "/assets/Images/Social/bluetooth-speaker.jpg"
 tags: [PCB Design, Bluetooth, ESP32, Power Electronics, 3D Printing, KiCad]
 ---
 
