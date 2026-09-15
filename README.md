@@ -154,7 +154,3 @@ Change the accent color in `assets/css/style.css` by updating the CSS variable:
 ```
 
 ---
-
-## License
-
-This project is open source. Feel free to use it as a starting point for your own portfolio.
