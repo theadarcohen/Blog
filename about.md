@@ -24,7 +24,7 @@ My interests span several hardware domains including power electronics, digital 
 
 - **Rechargeable Bluetooth Speaker** – Designed a portable Bluetooth speaker including schematic design, 4-layer PCB layout, battery management, firmware integration, and a custom enclosure.
 
-- **CNN Accelerator on an FPGA** – Trained a convolutional network for handwritten-digit recognition, quantized it to 8-bit integers, and implemented the inference hardware in SystemVerilog on an Artix-7 — 98.4% accuracy, bit-exact with its software model.
+- **CNN Accelerator on an FPGA** – Designed and brought up an 8-bit integer inference accelerator for handwritten-digit recognition on an Artix-7, reaching 98.4% accuracy and bit-exact agreement with its software model. Built together with an AI assistant, which wrote the code; the write-up explains the split.
 
 - **Discrete FM Receiver (design study)** – Designed a superheterodyne FM receiver from discrete transistors, building and measuring its 98 MHz low-noise amplifier, a tunable 87–117 MHz local oscillator, and the audio power stage, with mixers prototyped at lower frequencies.
 

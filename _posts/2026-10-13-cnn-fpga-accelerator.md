@@ -12,7 +12,7 @@ math: true
   <span><strong>Timeframe:</strong> September – October 2026</span>
   <span><strong>Role:</strong> Solo project</span>
   <span><strong>Type:</strong> Self-directed learning</span>
-  <span><strong>Tools:</strong> PyTorch, Vivado, SystemVerilog, Python, Cmod A7-35T (Artix-7)</span>
+  <span><strong>Tools:</strong> PyTorch, Vivado, SystemVerilog, Python, Claude (AI assistant), Cmod A7-35T (Artix-7)</span>
   <span><strong>Read time:</strong> ~10 min</span>
 </div>
 
@@ -20,7 +20,9 @@ math: true
 
 A neural network running on a CPU or GPU is software. I wanted to see what happens when you remove the processor entirely and build the network as hardware: no instructions, no operating system, just multipliers, memories and control logic laid out to match the shape of the computation.
 
-So I trained a small convolutional network to recognize handwritten digits, converted every weight and activation from floating point to 8-bit integers, and implemented the whole inference path in SystemVerilog on an Artix-7 FPGA. The finished accelerator classifies a digit in **8,590 clock cycles — 85.9 µs at 100 MHz** — using **36 of the chip's 90 DSP slices and about 10% of its logic**, and it agrees with its software reference on all 10,000 test images, bit for bit.
+So I trained a small convolutional network to recognize handwritten digits, converted every weight and activation from floating point to 8-bit integers, and built the whole inference path in SystemVerilog on an Artix-7 FPGA. The finished accelerator classifies a digit in **8,590 clock cycles — 85.9 µs at 100 MHz** — using **36 of the chip's 90 DSP slices and about 10% of its logic**, and it agrees with its software reference on all 10,000 test images, bit for bit.
+
+**How this one was built.** Unlike my other projects, I worked through this one with Claude, an AI assistant. The design decisions were shared: we went back and forth on the architecture, the quantization scheme and the hardware budget. All the code — the SystemVerilog, the training and quantization scripts, the reference model and the host tooling — was written by the AI from those decisions, and debugging was mostly AI-assisted too. What was mine: the choice of project, half of the design calls, the review of what came back, the bring-up on real hardware, the bug that made the board classify at 10% accuracy, and this write-up. I'm flagging it because the distinction matters when you read the rest of this page.
 
 ## The Network
 
@@ -162,7 +164,7 @@ The quantization cost essentially nothing in accuracy: the float model scored 98
 ## Lessons Learned
 
 - **Design the number format around the hardware you have.** Choosing a 25-bit shift wasn't a numerical decision, it was a hardware one: it made the multiplier constant fit the DSP slice's 18-bit port and the accumulator fit the 25-bit one, so requantization costs exactly one DSP slice instead of a pile of logic.
-- **A bit-exact software model turns debugging into bisection.** Writing the integer model and the debug taps felt like a detour at the time. They turned a wrong answer from the board into a stage-by-stage comparison with a definite answer.
+- **A bit-exact software model turns debugging into bisection.** Building the integer model and the debug taps felt like a detour at the time. They turned a wrong answer from the board into a stage-by-stage comparison with a definite answer.
 - **Check that the data is right before suspecting the logic.** The board behaved like it had a deep arithmetic bug, and the real cause was a parameter file from an older export. Verifying what you loaded is cheaper than probing what you built.
 - **Timing failures are often routing, not logic.** Missing 100 MHz by 79 ps looked alarming until the report showed the delay was in the wires. One register in the right place bought 0.9 ns.
 - **Know what actually limits performance.** The compute is 86 µs; the link that feeds it is 96 ms. Any further work on the datapath would be invisible next to the cost of getting an image onto the chip.
