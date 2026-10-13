@@ -114,6 +114,11 @@ The finished design uses a small fraction of the chip:
 
 Vivado estimates total power at **0.253 W**, most of it in the clock generator rather than the arithmetic.
 
+<figure style="max-width:420px; margin-left:auto; margin-right:auto;">
+  <img src="/Blog/assets/Images/CNN-FPGA/device-view.png" alt="Vivado device view of the Artix-7 die with this design's cells highlighted in yellow, forming two clusters in an otherwise empty fabric">
+  <figcaption>The implemented design on the die — the highlighted cells are the whole accelerator, one cluster per convolution stage, in a mostly empty chip</figcaption>
+</figure>
+
 ## Bring-Up: 10% Accuracy
 
 With the bitstream loaded, the first run on real hardware classified 200 images with **10.5% accuracy** — about what you'd get by guessing. The same images through the reference model gave 99.5%, and the two disagreed on 179 of 200.
