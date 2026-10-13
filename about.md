@@ -24,6 +24,8 @@ My interests span several hardware domains including power electronics, digital 
 
 - **Rechargeable Bluetooth Speaker** – Designed a portable Bluetooth speaker including schematic design, 4-layer PCB layout, battery management, firmware integration, and a custom enclosure.
 
+- **CNN Accelerator on an FPGA** – Trained a convolutional network for handwritten-digit recognition, quantized it to 8-bit integers, and implemented the inference hardware in SystemVerilog on an Artix-7 — 98.4% accuracy, bit-exact with its software model.
+
 - **Discrete FM Receiver (design study)** – Designed a superheterodyne FM receiver from discrete transistors, building and measuring its 98 MHz low-noise amplifier, a tunable 87–117 MHz local oscillator, and the audio power stage, with mixers prototyped at lower frequencies.
 
 My development process typically begins with studying the relevant theory and architectures, followed by simulation, prototyping, and iterative testing. After validating the design, I move to full system implementation, integration, and debugging until a complete working product is achieved.
